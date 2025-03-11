@@ -1,5 +1,4 @@
-VER=3.3.0
-REL=1
-SRCS="git::commit=tags/$VER::https://github.com/htop-dev/htop.git"
-CHKSUMS="SKIP"
+VER=3.4.0
+SRCS="tbl::https://github.com/htop-dev/htop/releases/download/$VER/htop-$VER.tar.xz"
+CHKSUMS="sha256::feaabd2d31ca27c09c367a3b1b547ea9f96105fc41f4dfa799e2f49daad5de29"
 CHKUPDATE="anitya::id=1332"
