@@ -35,6 +35,3 @@ ABSPLITDBG=0
 
 # FIXME: STL code can only be used with -fno-exceptions
 AB_FLAGS_EXC=0
-
-# FIXME: nodejs not supported on mips64r6el
-FAIL_ARCH="mips64r6el"
