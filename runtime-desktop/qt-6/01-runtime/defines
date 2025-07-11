@@ -18,7 +18,6 @@ BUILDDEP="gperf gtk-3 mariadb nodejs openssl postgresql python-2 python-3 \
 BUILDDEP__NOWEBENGINE=" \
           ${BUILDDEP/nodejs/}"
 BUILDDEP__LOONGSON3="${BUILDDEP__NOWEBENGINE}"
-BUILDDEP__MIPS64R6EL="${BUILDDEP__NOWEBENGINE}"
 BUILDDEP__PPC64EL="${BUILDDEP__NOWEBENGINE}"
 BUILDDEP__RISCV64="${BUILDDEP__NOWEBENGINE}"
 
@@ -31,7 +30,6 @@ PKGDEP__NOWEBENGINE="alsa-lib bluez cups dbus desktop-file-utils \
         xcb-util-image xcb-util-keysyms xcb-util-wm xdg-utils zlib \
         libxkbcommon vulkan"
 PKGDEP__LOONGSON3="${PKGDEP__NOWEBENGINE}"
-PKGDEP__MIPS64R6EL="${PKGDEP__NOWEBENGINE}"
 PKGDEP__PPC64EL="${PKGDEP__NOWEBENGINE}"
 PKGDEP__RISCV64="${PKGDEP__NOWEBENGINE}"
 
