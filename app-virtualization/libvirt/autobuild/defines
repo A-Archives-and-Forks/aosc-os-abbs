@@ -3,7 +3,7 @@ PKGSEC=admin
 PKGDEP="avahi bridge-utils curl cyrus-sasl dbus dmidecode dnsmasq \
         e2fsprogs gcc-runtime gettext gnutls iproute2 iptables \
         libcap-ng libgcrypt libgpg-error libnl libpcap libssh2 libxml2 \
-        lxc netcat netcf numactl openssl parted pm-utils polkit python-2 \
+        lxc netcat netcf numactl openssl parted pm-utils polkit python-3 \
         radvd systemd yajl x11-lib libssh qemu open-iscsi perl-xml-xpath \
         libiscsi sanlock"
 BUILDDEP="docutils qemu zfs rpcsvc-proto firewalld wireshark"
