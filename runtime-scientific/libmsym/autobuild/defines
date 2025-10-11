@@ -1,6 +1,6 @@
 PKGNAME=libmsym
 PKGSEC=libs
-PKGDEP="glibc python-2"
+PKGDEP="glibc python-3"
 PKGDES="Molecular point group symmetry lib"
 
 CMAKE_AFTER="-DBUILD_SHARED_LIBS=ON"
