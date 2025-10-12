@@ -1,7 +1,10 @@
 PKGNAME=commonmark
 PKGSEC=python
-PKGDEP="docutils future python-2 python-3"
-BUILDDEP="setuptools setuptools-python2"
+PKGDEP="docutils future python-3"
+BUILDDEP="setuptools-python3"
 PKGDES="Python parser for the CommonMark Markdown specifications"
 
 ABHOST=noarch
+ABTYPE=python
+
+NOPYTHON2=1
