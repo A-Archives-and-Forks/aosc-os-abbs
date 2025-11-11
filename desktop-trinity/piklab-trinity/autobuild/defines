@@ -1,11 +1,8 @@
 PKGNAME=piklab-trinity
 PKGSEC=Trinity
 PKGDEP="libusb-compat tdelibs"
+BUILDDEP="tde-common-cmake"
 PKGDES="An PIC-microcontroller IDE (Integrated Development Environment) for the Trinity Desktop Environment"
-
-AUTOTOOLS_AFTER="--enable-new-ldflags \
-                 --enable-pie \
-                 --disable-rpath"
 
 PKGCONFL="piklab"
 
