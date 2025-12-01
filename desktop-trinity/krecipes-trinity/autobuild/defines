@@ -2,7 +2,7 @@ PKGNAME=krecipes-trinity
 PKGSEC=Trinity
 PKGDEP="tdelibs sqlite"
 BUILDDEP="tde-common-cmake"
-PKGDES="A recipe book for the Trinity Desktop Environment"
+PKGDES="Recipe book for the Trinity Desktop Environment"
 
 CMAKE_AFTER=(
     -DWITH_SQLITE3=ON
