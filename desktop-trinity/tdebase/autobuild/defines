@@ -1,7 +1,7 @@
 PKGNAME=tdebase
 PKGSEC=Trinity
-PKGDEP="tdelibs libraw1394 linux-pam libusb openldap lm-sensors systemd
-        xscreensaver glu avahi-tqt samba hwdata x11-font libconfig arts xorg-server
+PKGDEP="tdelibs libraw1394 linux-pam libusb openldap lm-sensors systemd \
+        xscreensaver glu avahi-tqt samba hwdata x11-font libconfig arts xorg-server \
         sudo upower htdig libbsd cups"
 BUILDDEP="rpcsvc-proto tde-common-cmake"
 PKGDES="Basic applications and utilities for the Trinity Desktop Environment"
