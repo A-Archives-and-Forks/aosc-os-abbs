@@ -1,0 +1,84 @@
+From 0252651095dfd22479c0810b863d744b4b97dcf7 Mon Sep 17 00:00:00 2001
+From: Mingcong Bai <jeffbai@aosc.io>
+Date: Sat, 12 Apr 2025 10:56:35 +0800
+Subject: [PATCH 11/13] fix: disable GeoData update
+
+We handle this via mihomo-rules-dat.
+---
+ scripts/prebuild.mjs                     | 19 -------------------
+ src/components/setting/setting-clash.tsx | 13 +------------
+ 2 files changed, 1 insertion(+), 31 deletions(-)
+
+diff --git a/scripts/prebuild.mjs b/scripts/prebuild.mjs
+index 7ab56423..b0e945e4 100644
+--- a/scripts/prebuild.mjs
++++ b/scripts/prebuild.mjs
+@@ -604,21 +604,6 @@ const resolveUninstall = () => {
+   });
+ };
+ 
+-const resolveMmdb = () =>
+-  resolveResource({
+-    file: "Country.mmdb",
+-    downloadURL: `https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb`,
+-  });
+-const resolveGeosite = () =>
+-  resolveResource({
+-    file: "geosite.dat",
+-    downloadURL: `https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat`,
+-  });
+-const resolveGeoIP = () =>
+-  resolveResource({
+-    file: "geoip.dat",
+-    downloadURL: `https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat`,
+-  });
+ const resolveEnableLoopback = () =>
+   resolveResource({
+     file: "enableLoopback.exe",
+@@ -641,12 +626,8 @@ const resolveUnSetDnsScript = () =>
+ // =======================
+ const tasks = [
+   { name: "plugin", func: resolvePlugin, retry: 5, winOnly: true },
+-  { name: "service", func: resolveService, retry: 5 },
+   { name: "install", func: resolveInstall, retry: 5 },
+   { name: "uninstall", func: resolveUninstall, retry: 5 },
+-  { name: "mmdb", func: resolveMmdb, retry: 5 },
+-  { name: "geosite", func: resolveGeosite, retry: 5 },
+-  { name: "geoip", func: resolveGeoIP, retry: 5 },
+   {
+     name: "enableLoopback",
+     func: resolveEnableLoopback,
+diff --git a/src/components/setting/setting-clash.tsx b/src/components/setting/setting-clash.tsx
+index ff182f72..666511e9 100644
+--- a/src/components/setting/setting-clash.tsx
++++ b/src/components/setting/setting-clash.tsx
+@@ -65,14 +65,7 @@ const SettingClash = ({ onError }: Props) => {
+     mutateClash((old) => ({ ...old!, ...patch }), false);
+   };
+   const onUpdateGeo = async () => {
+-    try {
+-      await updateGeo();
+-      showNotice.success(
+-        "settings.feedback.notifications.clash.geoDataUpdated",
+-      );
+-    } catch (err: any) {
+-      showNotice.error(err);
+-    }
++    showNotice.error("GeoData should be updated with oma");
+   };
+ 
+   // 实现DNS设置开关处理函数
+@@ -279,10 +272,6 @@ const SettingClash = ({ onError }: Props) => {
+         />
+       )}
+ 
+-      <SettingItem
+-        onClick={onUpdateGeo}
+-        label={t("settings.sections.clash.form.fields.updateGeoData")}
+-      />
+     </SettingList>
+   );
+ };
+-- 
+2.52.0
+
