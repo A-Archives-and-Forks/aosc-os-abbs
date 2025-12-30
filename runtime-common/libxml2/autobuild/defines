@@ -1,11 +1,92 @@
 PKGNAME=libxml2
 PKGDES="Utilities and libraries for parsing XMLs"
 PKGSEC=utils
-PKGDEP="zlib readline ncurses xz"
+PKGDEP="zlib readline ncurses xz icu"
 
-AUTOTOOLS_AFTER=(
-	--with-history
-	--with-threads
-	--without-python
+ABTYPE=meson
+MESON_AFTER=(
+    "-Dicu=enabled"
+    "-Dlegacy=enabled"
+    "-Ddocs=disabled"
+    "-Dpython=disabled"
+    "-Dhttp=enabled"
 )
-ABTYPE=autotools
+
+PKGBREAK="0ad<=0.28.0-1 afdko<=4.0.3 akonadi<=23.08.5 appstream<=1.1.2 \
+          aria2<=1.37.0 artikulate<=23.08.5 atril<=1.28.3 audacious<=4.5.1-1 \
+          augeas<=1.14.1 autofs<=5.1.9-1 autogen<=5.18.16-2 bind<=1:9.20.18 \
+          brasero<=3.12.3-3 caja<=1:1.28.0 cantor<=23.08.5-2 castget<=2.0.1 \
+          cinnamon<=6.6.7 clamav<=1.5.1 compiz<=0.9.14.2-6 conky<=1.22.2 \
+          ctags<=6.2.20251005.0 \
+          darktable<=5.4.1-2 digikam<=8.8.0-2 dleyna<=0.8.3 \
+          dvdauthor<=0.7.2-4 ebook-tools<=0.2.2-4 emacs<=30.2-2 \
+          eom<=1:1.28.1-1 epiphany<=49.2 evolution<=3.58.3 \
+          evolution-data-server<=3.58.3 evolution-ews<=3.58.3 \
+          fcitx<=4.2.9.9-1 ffmpeg<=7.1.3-1 flatpak<=1.17.5-1 \
+          flatpak-builder<=1.4.7 flickcurl<=1.26-4 font-manager<=0.9.4-1 \
+          fontforge<=20251009-3 foomatic-db-engine<=4.0.13 gconf<=3.2.6-9 \
+          gdal<=3.12.1-3 geany-plugins<=2.1-2 gettext<=1:1.0-2 \
+          glade<=3.40.0-1 gnome-calculator<=49.2 \
+          gnome-control-center<=49.4-1 gnome-online-accounts<=3.56.4-1 \
+          gnustep-base<=1.31.1 goffice<=0.10.48 graphicsmagick<=1.3.46-2 \
+          grilo-plugins<=0.3.18 gstreamer<=1.28.1-2 \
+          gtksourceview-3<=3.24.11-3 gtksourceview-4<=4.8.3 \
+          gtksourceview-5<=5.18.0-1 gtranslator<=49.0 gupnp<=1.6.9 \
+          gupnp-av<=0.14.4 gupnp-dlna<=0.12.0 gvfs<=1.58.1 handbrake<=1.10.1 \
+          hivex<=1.3.24-2 hotdoc<=0.17.4-1 html5-parser<=0.4.12-1 \
+          httpd<=2.4.66 hwloc<=2.10.0 icecast<=2.4.4-3 \
+          imagemagick<=6.9.13+37-2 imagemagick+7<=7.1.1+32-2 \
+          inkscape<=1.4.3-1 intel-oneapi-basekit<=2025.3.2 \
+          kbibtex-trinity<=14.1.5 kdoctools<=5.115.0 khelpcenter<=23.08.5-2 \
+          kio<=5.115.0 kitinerary<=23.08.5-7 kodi<=21.3-2 \
+          koffice-trinity<=14.1.5-2 kopete<=23.08.5 ktouch<=23.08.5 \
+          labwc<=0.9.6 lasem<=1:0.5.2 lash<=0.6.0~rc2-3 libabw<=0.1.3 \
+          libaccounts-glib<=1.27 libavif<=1.4.0 libbluray<=1.4.0 \
+          libcmis<=0.5.2-4 libcroco<=0.6.13-2 libe-book<=0.1.3 \
+          libetonyek<=0.1.13 libgdata<=0.18.1-1 libglade<=2.6.4-9 \
+          libgnt<=2.14.4 libgovirt<=0.3.11 libgphoto2<=2.5.30-1 \
+          libgpod<=0.8.3-13 libgsf<=1.14.55 libguestfs<=1.58.0-4 \
+          libgweather<=4.5.0 libical<=3.0.18-1 liblangtag<=0.6.8 \
+          libmateweather<=1:1.28.2 libmusicbrainz-5<=5.1.0-4 libodfgen<=0.1.8 \
+          libosinfo<=1.12.0 libpurple<=2.14.14-2 libqalculate<=4.5.1-1 \
+          librcc<=0.2.13 libreoffice<=26.2.0.3-1 librsvg<=2.61.3-1 \
+          libsoup<=2.74.2-3 libspatialite<=5.1.0 libvirt<=12.1.0 \
+          libvirt-glib<=5.0.0 libvisio<=0.1.7-1 libxkbcommon<=1.13.1 \
+          libxklavier<=5.4-4 libxml++<=5.6.0 libxml++-2.6<=2.42.3-1 \
+          libxslt<=1.1.43-1 liferea<=1.16.7 lighttpd<=1.4.82 \
+          lincity-ng<=2.14.2 lldpd<=1.0.18-1 llvm-20<=20.1.8-8 \
+          llvm-21<=21.1.8-1 llvm-runtime-20<=20.1.8-8 \
+          llvm-runtime-21<=21.1.8-1 localsearch<=3.10.2-1 lttng-tools<=2.14.0 \
+          lxml<=6.0.2-2 m17n-lib<=1.8.6 manaplus<=2.1.3.17 mariadb<=12.1.2 \
+          mate-applets<=1:1.28.1 mate-calc<=1.28.0-1 \
+          mate-control-center<=1.28.1 mate-media<=1.28.1 \
+          mate-notification-daemon<=1:1.28.5 mate-system-monitor<=1:1.28.1 \
+          mlt<=7.36.1 msitools<=0.106 netcf<=0.2.8-5 netpbm<=10.86.48-1 \
+          networkmanager-openconnect<=1.2.10-1 nfs-utils<=2.8.4-1 \
+          nghttp2<=1.65.0-1 nokogiri<=1.18.10 oath-toolkit<=2.6.13 \
+          obconf<=2.0.4-6 obconf-qt<=0.16.4 open-vm-tools<=13.0.5-1 \
+          openbabel<=3.1.1-3 openbox<=3.6.1-2 opencollada<=1:1.6.68-3 \
+          openconnect<=9.12 openscad<=2021.01+git20251218 openslide<=4.0.0-1 \
+          osinfo-db-tools<=1.12.0 owntone<=29.0-1 pdal<=2.10.1 \
+          perl-xml-libxml<=2.0210 perl-xml-libxslt<=2.003000 phodav<=3.0 \
+          php<=8.5.4-1 pidgin<=2.14.14-2 pluma<=1.28.1 podofo<=0.10.3-1 \
+          postgresql<=2:18.3 postgresql-13<=13.23 postgresql-14<=14.22 \
+          postgresql-15<=15.17 postgresql-16<=16.13 postgresql-17<=17.9 \
+          postgresql-18<=18.3 powershell<=7.6.0 pstoedit<=4.02-1 \
+          pyside2<=5.15.16-3 pyside6<=6.10.2-1 qgis<=3.44.7-2 \
+          qt-5<=1:5.15.18+webengine5.15.19+webkit5.212.0+kde20251209-2 \
+          qt-6<=6.11.0-2 raptor2<=2.0.16-1 rest<=0.10.2 rhythmbox<=3.4.9 \
+          rnote<=0.13.1-3 rocm-llvm<=7.2.0-1 rrdtool<=1.7.2 rygel<=45.1 \
+          sane-backends<=1.4.0-2 scribus<=1.6.6 shared-mime-info<=2.4-2 \
+          snapper<=0.13.0 strigi<=0.7.8-6 tdelibs<=14.1.5-2 \
+          tdenetwork<=14.1.5 tdesdk<=14.1.5 tdewebdev<=14.1.5 \
+          telepathy-gabble<=0.18.4-3 telepathy-logger<=0.8.2-3 \
+          tellico-trinity<=14.1.5 thermald<=2.5.11 tinysparql<=3.10.1 \
+          totem-pl-parser<=3.26.6-2 tuba<=0.10.3 tumbler<=4.20.0-1 \
+          umbrello<=23.08.5-1 vcdimager<=2.0.1-2 virt-viewer<=11.0 \
+          virtualbox<=7.2.4-3 vlc<=3.0.23+2-2 vtk<=9.5.2-5 \
+          warmux<=1:11.04.1-5 wayland<=1.24.0-1 webkit2gtk<=1:2.50.3-1 \
+          wireshark<=4.6.4-1 wv<=1.2.9-3 xfce4-weather-plugin<=0.12.0 \
+          xfce4-xkb-plugin<=0.9.0 xine-lib<=1.2.13-9 xmlsec<=1.3.9 \
+          xournalpp<=1.3.1 xreader<=4.6.1-1 xscreensaver<=6.08 yaz<=5.37.0 \
+          graphviz<=14.1.5 yelp<=49.0"
