@@ -3,6 +3,7 @@ WEBENGINE_VER=5.15.19
 WEBKIT_VER=5.212.0
 KDE_VER=20251209
 VER=${UPSTREAM_VER}+webengine${WEBENGINE_VER}+webkit${WEBKIT_VER}+kde${KDE_VER}
+REL=2
 SRCS="https://repo.aosc.io/aosc-repacks/qt-5-$VER.tar.xz"
 CHKSUMS="sha256::595763d58fcbfc34fdffac8010a0e08d9d0b0e5e7320545d3a140614b6ba8ee7"
 SUBDIR="qt-${VER:0:1}"
@@ -12,4 +13,3 @@ ENVREQ="total_mem=60"
 ENVREQ__ARM64="total_mem_per_core=1.5"
 # Note: Prefer 3C5000 (or faster) build hosts.
 ENVREQ__LOONGARCH64="core=16"
-REL=1
