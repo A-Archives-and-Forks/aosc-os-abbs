@@ -2,3 +2,4 @@ VER=0.37.1
 SRCS="pypi::version=$VER::python-dbusmock"
 CHKSUMS="sha256::a65aeedc17d8bbc1f0bf3f0b295988914c48619882d77b9afa4117eed95fc594"
 CHKUPDATE="anitya::id=19778"
+REL="1"
