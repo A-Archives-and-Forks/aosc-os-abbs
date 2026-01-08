@@ -1,4 +1,5 @@
 VER=1.1.9
+REL=1
 SRCS="git::commit=tags/ver.$VER::https://github.com/BYVoid/OpenCC"
 CHKSUMS="SKIP"
 CHKUPDATE="anitya::id=2542"
