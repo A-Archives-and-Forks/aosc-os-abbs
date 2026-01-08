@@ -9,3 +9,4 @@ SUBDIR="apostrophe"
 CHKSUMS="SKIP \
          SKIP"
 CHKUPDATE="anitya::id=222624"
+REL="1"
