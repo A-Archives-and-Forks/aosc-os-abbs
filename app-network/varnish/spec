@@ -2,3 +2,4 @@ VER=8.0.0
 SRCS="tbl::https://varnish-cache.org/_downloads/varnish-$VER.tgz"
 CHKSUMS="sha256::633b8c4706591ceae241c8432ef84f7c5ef9787f4eea535babf5fc6c6111ad5b"
 CHKUPDATE="anitya::id=6910"
+REL="1"
