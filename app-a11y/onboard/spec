@@ -1,5 +1,6 @@
 UPSTREAM_VER=1.4.3-7
 VER=${UPSTREAM_VER/\-/+}
+REL=1
 SRCS="git::commit=tags/${UPSTREAM_VER}::https://github.com/onboard-osk/onboard"
 CHKSUMS="SKIP"
 CHKUPDATE="anitya::id=15218"
