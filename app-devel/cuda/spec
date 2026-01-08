@@ -8,3 +8,4 @@ CHKSUMS__AMD64="sha256::24ff323723722781436804b392a48f691cb40de9808095d3e2192d0d
 
 SRCS__ARM64="file::rename=cuda_${VER/+/_}_linux.run::https://developer.download.nvidia.com/compute/cuda/${UPSTREAM_VER}/local_installers/cuda_${VER/+/_}_linux_sbsa.run"
 CHKSUMS__ARM64="sha256::8adcd5d4b3e1e70f7420959b97514c0c97ec729da248d54902174c4d229bfd2c"
+REL="1"
