@@ -2,3 +2,4 @@ VER=2.8.4
 SRCS="tbl::https://sourceforge.net/projects/nfs/files/nfs-utils/$VER/nfs-utils-$VER.tar.gz"
 CHKSUMS="sha256::403c6aed9b8a7cc365df13cbc1358c0b8ed3a14326d1f84a117c42da6dabcd1c"
 CHKUPDATE="anitya::id=2081"
+REL="1"
