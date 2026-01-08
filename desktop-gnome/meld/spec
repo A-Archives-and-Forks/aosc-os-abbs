@@ -2,3 +2,4 @@ VER=3.23.0
 SRCS="tbl::https://download.gnome.org/sources/meld/${VER:0:4}/meld-$VER.tar.xz"
 CHKSUMS="sha256::983c2a4240e025a2109c7738198710e9d6b063c910b048332d14690cf538c2a6"
 CHKUPDATE="anitya::id=5520"
+REL="1"
