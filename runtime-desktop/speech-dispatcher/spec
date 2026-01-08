@@ -2,3 +2,4 @@ VER=0.12.1
 SRCS="tbl::https://github.com/brailcom/speechd/releases/download/$VER/speech-dispatcher-$VER.tar.gz"
 CHKSUMS="sha256::b14a5238d287d2dcce4dd42bbd66ca65fa228e7e683708267f7b34036f7ba4b4"
 CHKUPDATE="anitya::id=13411"
+REL="1"
