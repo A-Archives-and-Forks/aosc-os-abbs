@@ -5,3 +5,4 @@ SRCS="git::commit=df4532b97cfcdd74c6ce59aeaac9cc502bfc9a49::https://github.com/A
 CHKSUMS="SKIP"
 # FIXME: No CHKUPDATE here because its upstream now has no information about
 # this package, and it's not yet available on Anitya.
+REL="1"
