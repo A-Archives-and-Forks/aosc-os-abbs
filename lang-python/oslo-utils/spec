@@ -2,3 +2,4 @@ VER=9.2.0
 SRCS="pypi::version=$VER::oslo.utils"
 CHKSUMS="sha256::1f42006de6b9291a0305025f5ccdb8907120d88ed7ebc3784a1472a3328048ab"
 CHKUPDATE="anitya::id=3951"
+REL="1"
