@@ -4,6 +4,7 @@ PKGDEP="evolution-data-server evolution libmspack"
 BUILDDEP="intltool"
 PKGDES="Microsoft Exchange Web Services integration for Evolution"
 
+ABTYPE=cmakeninja
 CMAKE_AFTER=(
     '-DLIB_INSTALL_DIR=/usr/lib'
     '-DENABLE_MAINTAINER_MODE=OFF'
