@@ -33,3 +33,9 @@ MESON_AFTER=(
     '-Ddefault_editor=/usr/bin/editor'
     '-Dcredential_helpers=libsecret'
 )
+
+# FIXME: Race condition? Bad dependency? WTF?
+#
+# /usr/bin/ld: src/libgitcore.a: error adding symbols: file format not recognized
+# collect2: error: ld returned 1 exit status
+NOLTO=1
