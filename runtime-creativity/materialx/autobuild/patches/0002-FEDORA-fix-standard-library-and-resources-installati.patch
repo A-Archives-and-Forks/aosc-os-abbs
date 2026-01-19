@@ -1,0 +1,37 @@
+From 5bad376720b11d01d35a99c048fcccad0b0a721e Mon Sep 17 00:00:00 2001
+From: Mingcong Bai <jeffbai@aosc.io>
+Date: Mon, 19 Jan 2026 16:00:24 +0800
+Subject: [PATCH 2/2] FEDORA: fix standard library and resources installation
+ paths
+
+Link: https://src.fedoraproject.org/rpms/materialx/c/f6cde63672a1ede0671a7380b5eb8c9393b59444
+Signed-off-by: Mingcong Bai <jeffbai@aosc.io>
+---
+ cmake/modules/MaterialXConfig.cmake.in | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/cmake/modules/MaterialXConfig.cmake.in b/cmake/modules/MaterialXConfig.cmake.in
+index ad1b07f0..e7e6092c 100644
+--- a/cmake/modules/MaterialXConfig.cmake.in
++++ b/cmake/modules/MaterialXConfig.cmake.in
+@@ -20,7 +20,7 @@ include("${CMAKE_CURRENT_LIST_DIR}/@CMAKE_PROJECT_NAME@Targets.cmake")
+ # MATERIALX_RESOURCES_DIR    Path to MaterialX Resources (sample data, mtlx etc)
+ 
+ set_and_check(MATERIALX_BASE_DIR "@PACKAGE_CMAKE_INSTALL_PREFIX@")
+-set_and_check(MATERIALX_STDLIB_DIR "@PACKAGE_CMAKE_INSTALL_PREFIX@/libraries")
++set_and_check(MATERIALX_STDLIB_DIR "/usr/share/materialx/libraries/")
+ if(@MATERIALX_BUILD_PYTHON@ AND @MATERIALX_INSTALL_PYTHON@)
+     set_and_check(MATERIALX_PYTHON_DIR "@PACKAGE_CMAKE_INSTALL_PREFIX@/python")
+ endif()
+@@ -36,7 +36,7 @@ endif()
+ endif()
+ 
+ if(@MATERIALX_BUILD_RENDER@ AND @MATERIALX_INSTALL_RESOURCES@)
+-    set_and_check(MATERIALX_RESOURCES_DIR "@PACKAGE_CMAKE_INSTALL_PREFIX@/resources")
++    set_and_check(MATERIALX_RESOURCES_DIR "/usr/share/materialx/resources/")
+ endif()
+ 
+ check_required_components(@CMAKE_PROJECT_NAME@)
+-- 
+2.52.0
+

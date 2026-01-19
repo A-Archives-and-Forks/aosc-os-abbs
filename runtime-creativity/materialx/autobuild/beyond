@@ -1,15 +1,15 @@
 abinfo "Deleting stray files installed by the project..."
-for i in python resources; do
+for i in python; do
     rm -rv "${PKGDIR}/usr/${i}"
 done
 
 abinfo "Moving documentation to the correct location ..."
 mkdir -pv "$PKGDIR"/usr/share/doc/materialx
 mv -v \
-    "$PKGDIR"/usr/README.md \
-    "$PKGDIR"/usr/CHANGELOG.md \
-    "$PKGDIR"/usr/LICENSE \
-    "$PKGDIR"/usr/THIRD-PARTY.md \
+    "$PKGDIR"/usr/share/doc/README.md \
+    "$PKGDIR"/usr/share/doc/CHANGELOG.md \
+    "$PKGDIR"/usr/share/doc/LICENSE \
+    "$PKGDIR"/usr/share/doc/THIRD-PARTY.md \
     -t "$PKGDIR"/usr/share/doc/materialx/
 
 abinfo "Deduplicating materialx standard libraries in python package"
