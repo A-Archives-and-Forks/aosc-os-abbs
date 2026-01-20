@@ -1,4 +1,5 @@
 VER=1.14.55
+REL=1
 SRCS="tbl::https://download.gnome.org/sources/libgsf/${VER:0:4}/libgsf-$VER.tar.xz"
 CHKSUMS="sha256::74d60abba15bd3ea5ad17da5b924d8e36f649a25c3dc77adbabd2a3628a02131"
 CHKUPDATE="anitya::id=1980"
