@@ -1,9 +1,10 @@
 PKGNAME=pycryptodomex
 PKGSEC=python
-PKGDEP="python-3"
-PKGRECOM="gmp"
-BUILDDEP="python-build setuptools-python3"
-PKGDES="Self-contained Python package of low-level cryptographic primitives"
+PKGDEP="pycryptodome"
+PKGDES="Transition package for pycryptodomex (merged to pycryptodome)"
 
-ABTYPE=pep517
-NOPYTHON2=1
+PKGBREAK="pycryptodomex<=3.23.0 musicbox<=3.9.9-1 yt-dlp<=3.23.0 mycli<=3.23.0"
+PKGREP="pycryptodomex<=3.23.0"
+
+ABTYPE=dummy
+ABHOST=noarch
