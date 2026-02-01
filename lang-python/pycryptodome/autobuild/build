@@ -4,17 +4,19 @@ build_pep517_build
 build_pep517_install
 
 abinfo "Cleaning up..."
-rm -rv "$SRCDIR"/build
+rm -rv "$SRCDIR"/"$PKGNAME"_src/build
 rm -rv "$SRCDIR"/dist
 
 OLD_PKGNAME="$PKGNAME"
 export PKGNAME="pycryptodomex"
 # Note: These two modules can be built with the same source
 abinfo "Building pycryptodomex ..."
+mv "$SRCDIR"/"$OLD_PKGNAME"_src "$SRCDIR"/"$PKGNAME"_src
 abinfo "Creating .separate_namespace ..."
-touch "$SRCDIR"/.separate_namespace
+touch "$SRCDIR"/"$PKGNAME"_src/.separate_namespace
 
-build_pep517_configure
+# NOTE: the workaround has been applied, so don't apply it twice.
+# build_pep517_configure
 build_pep517_build
 build_pep517_install
 

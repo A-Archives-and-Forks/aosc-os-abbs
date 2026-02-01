@@ -3,7 +3,7 @@ PKGSEC=python
 PKGDEP="pycryptodome"
 PKGDES="Transition package for pycryptodomex (merged to pycryptodome)"
 
-PKGBREAK="pycryptodomex<=3.23.0 musicbox<=3.9.9-1 yt-dlp<=3.23.0 mycli<=3.23.0"
+PKGBREAK="pycrypto<=2.6.1-4 pycryptodomex<=3.23.0 musicbox<=1:0.3.1 yt-dlp<=2025.12.08 mycli<=1.42.0-1"
 PKGREP="pycryptodomex<=3.23.0"
 
 ABTYPE=dummy

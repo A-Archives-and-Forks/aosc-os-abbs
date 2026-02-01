@@ -5,8 +5,9 @@ PKGRECOM="gmp"
 BUILDDEP="python-build setuptools-python3"
 PKGDES="Collection of cryptographic algorithms and protocols"
 
-PKGBREAK="pycrypto<=2.6.1-4pycryptodomex<=3.23.0 musicbox<=3.9.9-1 yt-dlp<=3.23.0 mycli<=3.23.0"
+PKGBREAK="pycrypto<=2.6.1-4 pycryptodomex<=3.23.0 musicbox<=1:0.3.1 yt-dlp<=2025.12.08 mycli<=1.42.0-1"
 PKGREP="pycrypto<=2.6.1-4 pycryptodomex<=3.23.0"
+PKGPROV="pycryptodomex"
 # NOTE: building both pycryptodome and pycryptodomex in one package.
 ABTYPE=self
 NOPYTHON2=1
