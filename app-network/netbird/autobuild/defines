@@ -1,7 +1,9 @@
 PKGNAME=netbird
 PKGDES="Mesh VPN based on WireGuard"
-BUILDDEP="go git"
+BUILDDEP="go"
 PKGDEP="glibc"
 PKGSEC=net
 
-ABTYPE=self
+ABTYPE=gomod
+GO_PACKAGES=('client')
+GO_LDFLAGS=("-X 'github.com/netbirdio/netbird/version.version=$PKGVER'")
