@@ -1,9 +1,11 @@
 PKGNAME=libgphoto2
 PKGSEC=libs
-PKGDES="A library for accessing digital camera"
+PKGDES="Library for accessing digital camera"
 PKGDEP="zlib libexif libgd libusb libjpeg-turbo"
 
 ABSHADOW=0
 AUTOTOOLS_STRICT=0
-AUTOTOOLS_AFTER="--with-drivers=all \
-                 --disable-rpath"
+AUTOTOOLS_AFTER=(
+    "--with-drivers=all"
+    "--disable-rpath"
+)
