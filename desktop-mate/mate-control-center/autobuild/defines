@@ -7,4 +7,7 @@ PKGDEP="dbus-glib dconf desktop-file-utils gsettings-desktop-schemas \
 BUILDDEP="docbook2x mate-common yelp-tools"
 PKGDES="The MATE control center"
 
-AUTOTOOLS_AFTER="--disable-update-mimedb"
+ABTYPE=autotools
+AUTOTOOLS_AFTER=(
+        "--disable-update-mimedb"
+)
