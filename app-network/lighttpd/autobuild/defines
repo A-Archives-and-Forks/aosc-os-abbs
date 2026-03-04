@@ -10,27 +10,32 @@ PKGDEP__LOONGSON2F="${PKGDEP__RETRO}"
 PKGDEP__M68K="${PKGDEP__RETRO}"
 PKGDEP__POWERPC="${PKGDEP__RETRO}"
 PKGDEP__PPC64="${PKGDEP__RETRO}"
-PKGDES="A secure, fast, compliant and very flexible web server"
+PKGDES="Secure, fast, compliant and very flexible web server"
 
+ABTYPE=autotools
 AUTOTOOLS_STRICT=0
-AUTOTOOLS_AFTER="--libdir=/usr/lib/lighttpd/ \
-                 --sysconfdir=/etc/lighttpd \
-                 --with-mysql \
-                 --with-ldap \
-                 --with-attr \
-                 --with-openssl \
-                 --with-webdav-props \
-                 --with-webdav-locks \
-                 --with-lua"
-AUTOTOOLS_AFTER__RETRO=" \
-                 --libdir=/usr/lib/lighttpd/ \
-                 --sysconfdir=/etc/lighttpd \
-                 --with-attr \
-                 --with-openssl \
-                 --with-kerberos5 \
-                 --with-webdav-props \
-                 --with-webdav-locks \
-                 --with-lua"
+AUTOTOOLS_AFTER=(
+    '--libdir=/usr/lib/lighttpd/'
+    '--sysconfdir=/etc/lighttpd'
+    '--with-mysql'
+    '--with-ldap'
+    '--with-attr'
+    '--with-openssl'
+    '--with-webdav-props'
+    '--with-webdav-locks'
+    '--with-lua'
+)
+
+AUTOTOOLS_AFTER__RETRO=(
+    '--libdir=/usr/lib/lighttpd/'
+    '--sysconfdir=/etc/lighttpd'
+    '--with-attr'
+    '--with-openssl'
+    '--with-kerberos5'
+    '--with-webdav-props'
+    '--with-webdav-locks'
+    '--with-lua'
+)
 AUTOTOOLS_AFTER__ARMV4="${AUTOTOOLS_AFTER__RETRO}"
 AUTOTOOLS_AFTER__ARMV6HF="${AUTOTOOLS_AFTER__RETRO}"
 AUTOTOOLS_AFTER__ARMV7HF="${AUTOTOOLS_AFTER__RETRO}"
