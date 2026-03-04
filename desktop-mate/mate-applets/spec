@@ -1,4 +1,6 @@
 VER=1.28.1
+REL=1
+EPOCH=1
 SRCS="tbl::https://pub.mate-desktop.org/releases/${VER:0:4}/mate-applets-$VER.tar.xz"
 CHKSUMS="sha256::a5967141527dc5b172d322a6003c23aeec253160f650bb36430a06ddaefa7e2e"
 CHKUPDATE="anitya::id=230607"
