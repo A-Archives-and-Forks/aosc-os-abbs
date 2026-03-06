@@ -1,8 +1,7 @@
-From 4f24dfe2355d56f0e78eddeef862f807b010512a Mon Sep 17 00:00:00 2001
+From cac66b49ed5c785f23c5b5ddffb7bc4209494f6c Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Dirk=20M=C3=BCller?= <dirk@dmllr.de>
 Date: Wed, 9 Mar 2022 17:47:23 +0100
-Subject: [PATCH 1/2] cmd/link: stop forcing binutils-gold dependency on
- aarch64
+Subject: [PATCH] cmd/link: stop forcing binutils-gold dependency on aarch64
 
 The bfd linker appears to be working just fine at least in version
 2.41 or above. Reject the known broken one instead, which
