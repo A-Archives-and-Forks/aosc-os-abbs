@@ -1,0 +1,14 @@
+PKGNAME=ros-jazzy-composition-interfaces
+PKGSEC=ros
+PKGDEP="ros-jazzy-ros-workspace ros-jazzy-rcl-interfaces ros-jazzy-rosidl-default-runtime"
+BUILDDEP="ros-jazzy-ament-cmake ros-jazzy-rosidl-default-generators ros-jazzy-ament-lint-common"
+PKGDES="Message and service definitions for ROS 2 to manage composable nodes in container process"
+
+ABTYPE=cmakeninja
+PREFIX="/opt/ros/jazzy"
+ABSPLITDBG=0
+NOSTATIC=0
+CMAKE_AFTER=(
+    "-DCMAKE_PREFIX_PATH=/opt/ros/jazzy"
+    "-DBUILD_TESTING=OFF"
+)
