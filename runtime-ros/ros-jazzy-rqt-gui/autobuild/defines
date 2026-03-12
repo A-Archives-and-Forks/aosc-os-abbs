@@ -1,0 +1,11 @@
+PKGNAME=ros-jazzy-rqt-gui
+PKGSEC=ros
+PKGDEP="ros-jazzy-ros-workspace ros-jazzy-ament-index-python ros-jazzy-python-qt-binding catkin-pkg ros-jazzy-qt-gui ros-jazzy-rclpy"
+BUILDDEP="ros-jazzy-ament-lint-auto ros-jazzy-ament-lint-common"
+PKGDES="Main program for the ROS 2 integrated GUI"
+
+ABTYPE=python
+PREFIX="/opt/ros/jazzy"
+ABSPLITDBG=0
+NOPYTHON2=1
+ABHOST=noarch
