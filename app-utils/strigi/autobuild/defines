@@ -1,12 +1,15 @@
 PKGNAME=strigi
 PKGSEC=libs
-PKGDES="A desktop search engine"
+PKGDES="Desktop search engine"
 PKGDEP="expat libxml2 dbus exiv2"
-BUILDDEP="cmake"
 
-CMAKE_AFTER="-DENABLE_INOTIFY=ON -DENABLE_LOG4CXX=OFF \
-             -DENABLE_FAM=ON \
-             -DENABLE_CLUCENE=OFF \
-             -DENABLE_CLUCENE_NG=OFF \
-             -DENABLE_FFMPEG=OFF \
-             -DENABLE_QT4=OFF"
+ABTYPE=cmakeninja
+CMAKE_AFTER=(
+    '-DENABLE_INOTIFY=ON'
+    '-DENABLE_LOG4CXX=OFF'
+    '-DENABLE_FAM=ON'
+    '-DENABLE_CLUCENE=OFF'
+    '-DENABLE_CLUCENE_NG=OFF'
+    '-DENABLE_FFMPEG=OFF'
+    '-DENABLE_QT4=OFF'
+)
