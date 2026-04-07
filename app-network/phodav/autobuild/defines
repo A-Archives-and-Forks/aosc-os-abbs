@@ -2,8 +2,9 @@ PKGNAME=phodav
 PKGSEC=libs
 PKGDEP="libsoup-3 avahi xz"
 BUILDDEP="asciidoc gtk-doc intltool xmlto"
-PKGDES="A WebDav server implementation using libsoup (RFC 4918)"
+PKGDES="WebDav server implementation using libsoup (RFC 4918)"
 
+ABTYPE=meson
 MESON_AFTER=(
     -Dgtk_doc=enabled
     -Davahi=enabled
