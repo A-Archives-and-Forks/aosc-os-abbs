@@ -1,5 +1,6 @@
 EPOCH=1
 VER=2.5.11
+REL=1
 SRCS="git::commit=tags/v$VER::https://github.com/intel/thermal_daemon"
 CHKSUMS="SKIP"
 CHKUPDATE="anitya::id=14500"
