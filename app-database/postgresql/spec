@@ -21,6 +21,7 @@
 # 10. Run a test build with your Ciel workspace.
 
 VER=18.3
+REL=1
 DUMMYSRC=1
 SUBDIR="."
 # Do NOT edit this field as this points to the latest release.
